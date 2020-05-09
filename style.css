@@ -53,8 +53,8 @@ body {
     width: 5%;
     height: 40px;
     background-color: rgba(0,0,0,0);
-    left: 30px;
-    top: 0px;
+    left: 492px;
+    top: 20px;
     position: absolute;
     /*display: block;*/
 }
@@ -68,10 +68,10 @@ body {
 }
 
 .fix_color:hover {
-    height: 40px;
-    width: 40px;
     transition: .8s;
-    opacity: 1;
+    opacity: 2;
+    transform: scale(2.5);
+    transition: .6s ease;
 }
 
 #color-1 {
@@ -84,6 +84,10 @@ body {
 
 #color-3 {
     background-color: #F27405;
+}
+
+#color-4 {
+    background-color: #0bb223;
 }
 
 .wrapper {
@@ -199,7 +203,7 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
+.btn-new { top: 340px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 
