@@ -109,7 +109,9 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         scoreInput = document.getElementById('fname');
 
         // Check if player won the game
-        if (scores[activePlayer] >= scoreInput.value) {
+        if (scoreInput.value <= 2) {
+            alert('Try bigger numbers! --> Numbers must be greater than 2')
+        }else if (scores[activePlayer] >= scoreInput.value) {
 
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.dice-0').style.display = 'none';
