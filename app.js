@@ -109,9 +109,9 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         scoreInput = document.getElementById('fname');
 
         // Check if player won the game
-        if (scoreInput.value <= 2) {
+        if (scoreInput.value <= 1) {
             alert('Try bigger numbers! --> Numbers must be greater than 2')
-        }else if (scores[activePlayer] >= scoreInput.value) {
+        } else if (scores[activePlayer] >= scoreInput.value) {
 
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.dice-0').style.display = 'none';
@@ -188,8 +188,38 @@ function init() {
 
 // CHANGE COLOR
 
+//COLOR-1 --> Start
+
+document.getElementById('color-1').addEventListener('click', function () {
+    document.querySelector('.player-score').style.color = '#2F5373';
+    document.querySelector('#player-current-box-1').style.backgroundColor = '#2F5373';
+    document.querySelector('#player-current-box-2').style.backgroundColor = '#2F5373';
+    document.querySelector('.btn-new i').style.color = '#2F5373';
+    document.querySelector('.btn-roll i').style.color = '#2F5373';
+    document.querySelector('.btn-hold i').style.color = '#2F5373';
+
+
+    var styleElem = document.head.appendChild(document.createElement("style"));
+    styleElem.innerHTML = ".active .player-name::after {color: #2F5373;}";
+
+    // document.querySelector('.after-element').style.color = 'Blue';
+    // document.querySelector('.active .player-name ::after').style.color = 'Blue';
+
+    document.querySelector('.player-name').style.color = '#2F5373';
+    document.querySelector('#name-1').style.color = '#2F5373';
+    document.querySelector('#score-1').style.color = '#2F5373';
+    document.querySelector('.player-0-panel').style.backgroundColor = '#b0c9f1';
+    document.querySelector('.player-1-panel').style.backgroundColor = '#fff';
+    document.body.style.backgroundColor = "#010D26";
+})
+
+//COLOR-2 Finish <--
+
+
+
+//COLOR-2 --> Start
+
 document.getElementById('color-2').addEventListener('click', function () {
-    document.querySelector('h1').style.color = 'Red';
     document.querySelector('.player-score').style.color = 'Red';
     document.querySelector('#player-current-box-1').style.backgroundColor = 'Red';
     document.querySelector('#player-current-box-2').style.backgroundColor = 'Red';
@@ -211,6 +241,37 @@ document.getElementById('color-2').addEventListener('click', function () {
     document.querySelector('.player-1-panel').style.backgroundColor = 'red';
     document.body.style.backgroundColor = "#5c7362";
 })
+
+//COLOR-2 Finish <--
+
+
+
+//COLOR-3 --> Start
+
+document.getElementById('color-2').addEventListener('click', function () {
+    document.querySelector('.player-score').style.color = 'Red';
+    document.querySelector('#player-current-box-1').style.backgroundColor = 'Red';
+    document.querySelector('#player-current-box-2').style.backgroundColor = 'Red';
+    document.querySelector('.btn-new i').style.color = 'Blue';
+    document.querySelector('.btn-roll i').style.color = 'Blue';
+    document.querySelector('.btn-hold i').style.color = 'Blue';
+
+
+    var styleElem = document.head.appendChild(document.createElement("style"));
+    styleElem.innerHTML = ".active .player-name::after {color: black;}";
+
+    // document.querySelector('.after-element').style.color = 'Blue';
+    // document.querySelector('.active .player-name ::after').style.color = 'Blue';
+
+    document.querySelector('.player-name').style.color = 'Red';
+    document.querySelector('#name-1').style.color = 'red';
+    document.querySelector('#score-1').style.color = 'red';
+    document.querySelector('.player-0-panel').style.backgroundColor = 'red';
+    document.querySelector('.player-1-panel').style.backgroundColor = 'red';
+    document.body.style.backgroundColor = "#5c7362";
+})
+
+//COLOR-3 Finish <--
 
 
 

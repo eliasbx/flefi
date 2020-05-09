@@ -6,13 +6,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 .clearfix::after {
     content: "";
     display: table;
     clear: both;
+    z-index: 0;
 }
 
 body {
@@ -24,6 +24,8 @@ body {
     position: relative;
     height: 100vh;
     color: #555;
+    z-index: 0;
+    position: relative;
 }
 
 #titleGame {
@@ -48,36 +50,40 @@ body {
 }
 
 #color_change {
-    height: auto;
     width: 5%;
-    height: 30px;
+    height: 40px;
     background-color: rgba(0,0,0,0);
-    display: flex;
-    float: left;
-    margin-top: 100px;
-    position: fixed;
+    left: 30px;
+    top: 0px;
+    position: absolute;
+    /*display: block;*/
 }
 
 .fix_color {
     width: 3%;
+    height: 15px;
+    width: 15px;
+    transition: .5s;
+    opacity: 0.4;
+}
+
+.fix_color:hover {
+    height: 40px;
+    width: 40px;
+    transition: .8s;
+    opacity: 1;
 }
 
 #color-1 {
-    background-color: yellow;
-    height: 30px;
-    width: 30px;
+    background-color: #2F5373;
 }
 
 #color-2 {
-    background-color: red;
-    height: 30px;
-    width: 30px;
+    background-color: #BF3111;
 }
 
 #color-3 {
-    background-color: blue;
-    height: 30px;
-    width: 30px;
+    background-color: #F27405;
 }
 
 .wrapper {
@@ -215,6 +221,7 @@ i {
     font-family: Lato;
     font-size: 20px;
     text-align: center;
+    border: 1px solid;
 }
 
 .dice-0 {
@@ -268,3 +275,4 @@ i {
     color: #fff;
     cursor: alias;
 }
+
