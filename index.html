@@ -16,12 +16,6 @@
 
     </div>
 
-<!--    <div id="color_change">-->
-<!--        <div class="fix_color" id="color-1"></div>-->
-<!--        <div class="fix_color" id="color-2"></div>-->
-<!--        <div class="fix_color" id="color-3"></div>-->
-<!--    </div>-->
-
         <div class="wrapper clearfix">
             <div id="color_change">
                 <div class="fix_color" id="color-1"></div>
@@ -47,7 +41,9 @@
                 </div>
             </div>
             <form id="box-number">
-                <input type="number" id="fname" placeholder="FINAL SCORE" min="2">
+<!--                <input type="number" id="fname" placeholder="FINAL SCORE" min="2" step="1">-->
+                <input id="fname" min="2" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/.*?(([0-9]*\.)?[0-9]+).*/g, '$1');" placeholder="FINAL SCORE">
+
 
             </form>
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>

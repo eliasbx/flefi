@@ -18,12 +18,13 @@ var scores, roundScore, activePlayer, gamePlaying;
 
 init();
 
+var scoreInput = document.getElementById('fname');
 
 
 // BUTTON FOR ROLL DICED    Start -->
 
 document.querySelector('.btn-roll').addEventListener('click', function(){
-    if(gamePlaying) {
+    if(gamePlaying && scoreInput.value !== '' && scoreInput.value !== '.') {
         // 1. Random number
         var dice0 = Math.floor(Math.random() * 6) + 1;
         var dice1 = Math.floor(Math.random() * 6) + 1;
@@ -79,18 +80,16 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
 //INPUT FINAL SCORE Strat -->
 
+
 document.querySelector('#box-number').addEventListener('submit', function (e) {
     scoreInput = document.getElementById('fname');
 
     //prevent the normal submission of the form
     e.preventDefault();
     console.log(scoreInput.value)
-    
+
 });
 
-document.querySelector('#fname').addEventListener('click', function () {
-    document.querySelector('#fname').style.borderColor = '#0bb223';
-})
 
 //INPUT FINAL SCORE Finish <--
 
@@ -99,7 +98,7 @@ document.querySelector('#fname').addEventListener('click', function () {
 // BUTTON HOLD Start -->
 
 document.querySelector('.btn-hold').addEventListener('click', function() {
-    if (gamePlaying) {
+    if (gamePlaying && scoreInput.value !== '' && scoreInput.value !== '.') {
         // Add CURRENT score to GLOBAL score
         scores[activePlayer] += roundScore;
 
@@ -108,10 +107,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
         scoreInput = document.getElementById('fname');
 
-        // Check if player won the game
-        if (scoreInput.value <= 1) {
-            alert('Try bigger numbers! --> Numbers must be greater than 2')
-        } else if (scores[activePlayer] >= scoreInput.value) {
+            if (scores[activePlayer] >= scoreInput.value) {
 
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.dice-0').style.display = 'none';
@@ -198,8 +194,6 @@ document.getElementById('color-1').addEventListener('click', function () {
     document.querySelector('.btn-roll i').style.color = '#2F5373';
     document.querySelector('.btn-hold i').style.color = '#2F5373';
 
-    nextPlayer()
-
 
     var styleElem = document.head.appendChild(document.createElement("style"));
     styleElem.innerHTML = ".active .player-name::after {color: #2F5373;}";
@@ -210,12 +204,15 @@ document.getElementById('color-1').addEventListener('click', function () {
     // document.querySelector('.after-element').style.color = 'Blue';
     // document.querySelector('.active .player-name ::after').style.color = 'Blue';
 
-    document.querySelector('.player-name').style.color = '#2F5373';
+    document.querySelector('.player-name').style.color = '#000';
     document.querySelector('#name-1').style.color = '#2F5373';
     document.querySelector('#score-1').style.color = '#2F5373';
     document.querySelector('.player-0-panel').style.backgroundColor = '#b3cef6';
     document.querySelector('.player-1-panel').style.backgroundColor = '#fff';
     document.body.style.backgroundColor = "#010D26";
+
+    document.querySelector('#fname').style.borderColor = '#2F5373';
+
 });
 
 //COLOR-1 Finish <--
@@ -242,12 +239,15 @@ document.getElementById('color-2').addEventListener('click', function () {
     // document.querySelector('.after-element').style.color = 'Blue';
     // document.querySelector('.active .player-name ::after').style.color = 'Blue';
 
-    document.querySelector('.player-name').style.color = '#BF3111';
+    document.querySelector('.player-name').style.color = '#000';
     document.querySelector('#name-1').style.color = '#BF3111';
     document.querySelector('#score-1').style.color = '#BF3111';
     document.querySelector('.player-0-panel').style.backgroundColor = '#f8c9cd';
     document.querySelector('.player-1-panel').style.backgroundColor = '#fff';
     document.body.style.backgroundColor = "#3b0b04";
+
+    document.querySelector('#fname').style.borderColor = '#BF3111';
+
 });
 
 //COLOR-2 Finish <--
@@ -276,12 +276,15 @@ document.getElementById('color-3').addEventListener('click', function () {
     // document.querySelector('.after-element').style.color = 'Blue';
     // document.querySelector('.active .player-name ::after').style.color = 'Blue';
 
-    document.querySelector('.player-name').style.color = '#F27405';
+    document.querySelector('.player-name').style.color = '#000';
     document.querySelector('#name-1').style.color = '#F27405';
     document.querySelector('#score-1').style.color = '#F27405';
     document.querySelector('.player-0-panel').style.backgroundColor = '#f7e3c7';
     document.querySelector('.player-1-panel').style.backgroundColor = '#fff';
     document.body.style.backgroundColor = "#5e2c06";
+
+    document.querySelector('#fname').style.borderColor = '#F27405';
+
 });
 
 //COLOR-3 Finish <--
@@ -309,12 +312,15 @@ document.getElementById('color-4').addEventListener('click', function () {
     // document.querySelector('.after-element').style.color = 'Blue';
     // document.querySelector('.active .player-name ::after').style.color = 'Blue';
 
-    document.querySelector('.player-name').style.color = '#0bb223';
+    document.querySelector('.player-name').style.color = '#000';
     document.querySelector('#name-1').style.color = '#0bb223';
     document.querySelector('#score-1').style.color = '#0bb223';
     document.querySelector('.player-0-panel').style.backgroundColor = '#e2fff3';
     document.querySelector('.player-1-panel').style.backgroundColor = '#fff';
     document.body.style.backgroundColor = "#012633";
+
+    document.querySelector('#fname').style.borderColor = '#0bb223';
+
 });
 
 
