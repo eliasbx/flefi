@@ -50,7 +50,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
         //3`. Two six in a row
         if (dice1 + dice0 === 12) {
-            alert('Double 6 for Player' + parseInt(activePlayer));
+            alert('Double 6 for Player' + activePlayer);
             nextPlayer()
             document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer] = 0;;
 
@@ -305,6 +305,9 @@ document.getElementById('color-4').addEventListener('click', function () {
     document.body.style.backgroundColor = "#012633";
 
     document.querySelector('#fname').style.borderColor = '#0bb223';
+
+
+    console.log(activePlayer)
 
 
 
