@@ -24,7 +24,7 @@ var scoreInput = document.getElementById('fname');
 // BUTTON FOR ROLL DICED    Start -->
 
 document.querySelector('.btn-roll').addEventListener('click', function(){
-    if(gamePlaying && scoreInput.value !== '' && scoreInput.value !== '.') {
+    if(gamePlaying && scoreInput.value !== '' && scoreInput.value !== '.' && scoreInput.value !== '..' && scoreInput.value !== '...' && scoreInput.value !== '....' && scoreInput.value !== '.....' && scoreInput.value !== '......' && scoreInput.value >= 2) {
         // 1. Random number
         var dice0 = Math.floor(Math.random() * 6) + 1;
         var dice1 = Math.floor(Math.random() * 6) + 1;
@@ -50,13 +50,12 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
         //3`. Two six in a row
         if (dice1 + dice0 === 12) {
-            alert('no works');
-            activePlayer === 0 ? activePlayer = 0 : activePlayer = 1;
+            alert('Double 6 for Player' + parseInt(activePlayer));
+            activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
             roundScore = 0;
 
 
-            document.getElementById('current-0').textContent = '0';
-            document.getElementById('current-1').textContent = '0';
+            document.getElementById('current-' + activePlayer).textContent = '0';
 
             document.querySelector('.player-0-panel').classList.toggle('active');
             document.querySelector('.player-1-panel').classList.toggle('active');
@@ -98,7 +97,7 @@ document.querySelector('#box-number').addEventListener('submit', function (e) {
 // BUTTON HOLD Start -->
 
 document.querySelector('.btn-hold').addEventListener('click', function() {
-    if (gamePlaying && scoreInput.value !== '' && scoreInput.value !== '.') {
+    if (gamePlaying && scoreInput.value !== '' && scoreInput.value !== '.' && scoreInput.value !== '..' && scoreInput.value !== '...' && scoreInput.value !== '....' && scoreInput.value !== '.....' && scoreInput.value !== '......' && scoreInput.value >= 2) {
         // Add CURRENT score to GLOBAL score
         scores[activePlayer] += roundScore;
 
@@ -322,6 +321,7 @@ document.getElementById('color-4').addEventListener('click', function () {
     document.querySelector('#fname').style.borderColor = '#0bb223';
 
 });
+
 
 
 
