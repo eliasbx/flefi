@@ -51,22 +51,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         //3`. Two six in a row
         if (dice1 + dice0 === 12) {
             alert('Double 6 for Player' + parseInt(activePlayer));
-            activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-            roundScore = 0;
-
-
-            document.getElementById('current-' + activePlayer).textContent = '0';
-
-            document.querySelector('.player-0-panel').classList.toggle('active');
-            document.querySelector('.player-1-panel').classList.toggle('active');
-
-            // document.querySelector('.player-0-panel').classList.remove('active');
-            // document.querySelector('.player-1-panel').classList.add('active');
-
-            document.querySelector('.dice-0').style.display = 'none';
-            document.querySelector('.dice-1').style.display = 'none';
-
-            document.querySelector('#score-' + activePlayer).textContent = '0';
+            nextPlayer()
+            document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer] = 0;;
 
         }
 
@@ -319,6 +305,8 @@ document.getElementById('color-4').addEventListener('click', function () {
     document.body.style.backgroundColor = "#012633";
 
     document.querySelector('#fname').style.borderColor = '#0bb223';
+
+
 
 });
 
