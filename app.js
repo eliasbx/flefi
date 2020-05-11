@@ -169,150 +169,55 @@ function init() {
 
 // CHANGE COLOR
 
-//COLOR-1 --> Start
+var changeColors = document.querySelectorAll('#color_change .fix_color');
+var root = document.querySelector(':root');
 
-document.getElementById('color-1').addEventListener('click', function () {
-    document.querySelector('.player-score').style.color = '#2F5373';
-    document.querySelector('#player-current-box-1').style.backgroundColor = '#2F5373';
-    document.querySelector('#player-current-box-2').style.backgroundColor = '#2F5373';
-    document.querySelector('.btn-new i').style.color = '#2F5373';
-    document.querySelector('.btn-roll i').style.color = '#2F5373';
-    document.querySelector('.btn-hold i').style.color = '#2F5373';
+changeColors.forEach((change) => {
+    change.addEventListener('click', (e) => {
+        root.style.setProperty('--theme-color', e.target.style.backgroundColor);
+    })
 
-
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = ".active .player-name::after {color: #2F5373;}";
-
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = "#titleGame h1:hover {color: #40709C;}";
-
-    // document.querySelector('.after-element').style.color = 'Blue';
-    // document.querySelector('.active .player-name ::after').style.color = 'Blue';
-
-    document.querySelector('.player-name').style.color = '#000';
-    document.querySelector('#name-1').style.color = '#2F5373';
-    document.querySelector('#score-1').style.color = '#2F5373';
-    document.querySelector('.player-0-panel').style.backgroundColor = '#b3cef6';
-    document.querySelector('.player-1-panel').style.backgroundColor = '#fff';
-    document.body.style.backgroundColor = "#010D26";
-
-    document.querySelector('#fname').style.borderColor = '#2F5373';
-
-});
-
-//COLOR-1 Finish <--
+})
 
 
+document.getElementById('color-1').addEventListener('click', () => {
 
-//COLOR-2 --> Start
+    document.documentElement.style
+        .setProperty('--player-4', '#b3cef6');
 
-document.getElementById('color-2').addEventListener('click', function () {
-    document.querySelector('.player-score').style.color = '#BF3111';
-    document.querySelector('#player-current-box-1').style.backgroundColor = '#BF3111';
-    document.querySelector('#player-current-box-2').style.backgroundColor = '#BF3111';
-    document.querySelector('.btn-new i').style.color = '#BF3111';
-    document.querySelector('.btn-roll i').style.color = '#BF3111';
-    document.querySelector('.btn-hold i').style.color = '#BF3111';
+        document.body.style.backgroundColor = "#010D26";
 
 
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = ".active .player-name::after {color: #BF3111;}";
+})
 
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = "#titleGame h1:hover {color: #A92C10;}";
+document.getElementById('color-2').addEventListener('click', () => {
 
-    // document.querySelector('.after-element').style.color = 'Blue';
-    // document.querySelector('.active .player-name ::after').style.color = 'Blue';
+    document.documentElement.style
+        .setProperty('--player-4', '#f8c9cd');
 
-    document.querySelector('.player-name').style.color = '#000';
-    document.querySelector('#name-1').style.color = '#BF3111';
-    document.querySelector('#score-1').style.color = '#BF3111';
-    document.querySelector('.player-0-panel').style.backgroundColor = '#f8c9cd';
-    document.querySelector('.player-1-panel').style.backgroundColor = '#fff';
-    document.body.style.backgroundColor = "#3b0b04";
+        document.body.style.backgroundColor = "#3b0b04";
 
-    document.querySelector('#fname').style.borderColor = '#BF3111';
+})
 
-});
+document.getElementById('color-3').addEventListener('click', () => {
 
-//COLOR-2 Finish <--
+    document.documentElement.style
+        .setProperty('--player-4', '#f7e3c7');
+
+        document.body.style.backgroundColor = "#5e2c06";
 
 
+})
 
-//COLOR-3 --> Start
+document.getElementById('color-4').addEventListener('click', () => {
 
-document.getElementById('color-3').addEventListener('click', function () {
-    document.querySelector('.player-score').style.color = '#F27405';
-    document.querySelector('#player-current-box-1').style.backgroundColor = '#F27405';
-    document.querySelector('#player-current-box-2').style.backgroundColor = '#F27405';
-    document.querySelector('.btn-new i').style.color = '#F27405';
-    document.querySelector('.btn-roll i').style.color = '#F27405';
-    document.querySelector('.btn-hold i').style.color = '#F27405';
+    document.documentElement.style
+        .setProperty('--player-4', '#e2fff3');
 
-
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = ".active .player-name::after {color: #F27405;}";
-
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = "#titleGame h1:hover {color: #FF891C;}";
-
-
-
-    // document.querySelector('.after-element').style.color = 'Blue';
-    // document.querySelector('.active .player-name ::after').style.color = 'Blue';
-
-    document.querySelector('.player-name').style.color = '#000';
-    document.querySelector('#name-1').style.color = '#F27405';
-    document.querySelector('#score-1').style.color = '#F27405';
-    document.querySelector('.player-0-panel').style.backgroundColor = '#f7e3c7';
-    document.querySelector('.player-1-panel').style.backgroundColor = '#fff';
-    document.body.style.backgroundColor = "#5e2c06";
-
-    document.querySelector('#fname').style.borderColor = '#F27405';
-
-});
-
-//COLOR-3 Finish <--
-
-
-
-//COLOR-4 Start -->
-
-
-document.getElementById('color-4').addEventListener('click', function () {
-    document.querySelector('.player-score').style.color = '#0bb223';
-    document.querySelector('#player-current-box-1').style.backgroundColor = '#0bb223';
-    document.querySelector('#player-current-box-2').style.backgroundColor = '#0bb223';
-    document.querySelector('.btn-new i').style.color = '#0bb223';
-    document.querySelector('.btn-roll i').style.color = '#0bb223';
-    document.querySelector('.btn-hold i').style.color = '#0bb223';
-
-
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = ".active .player-name::after {color: #0bb223;}";
-
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = "#titleGame h1:hover {color: #0bb223;}";
-
-    // document.querySelector('.after-element').style.color = 'Blue';
-    // document.querySelector('.active .player-name ::after').style.color = 'Blue';
-
-    document.querySelector('.player-name').style.color = '#000';
-    document.querySelector('#name-1').style.color = '#0bb223';
-    document.querySelector('#score-1').style.color = '#0bb223';
-    document.querySelector('.player-0-panel').style.backgroundColor = '#e2fff3';
-    document.querySelector('.player-1-panel').style.backgroundColor = '#fff';
     document.body.style.backgroundColor = "#012633";
 
-    document.querySelector('#fname').style.borderColor = '#0bb223';
 
-
-    console.log(activePlayer)
-
-
-
-});
-
+})
 
 
 

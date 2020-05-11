@@ -1,6 +1,14 @@
 /**********************************************
 *** GENERAL
 **********************************************/
+:root {
+    --theme-color: #0bb223;
+    --player-1: #b3cef6;
+    --player-2: #f8c9cd;
+    --player-3: #f7e3c7;
+    --player-4: #e2fff3;
+}
+
 
 * {
     margin: 0;
@@ -31,7 +39,7 @@ body {
     margin: auto;
 }
 
-#titleGame h1 {
+#titleGame h1{
     color: #fff;
     text-align: center;
     font-size: 100px;
@@ -42,7 +50,7 @@ body {
 
 #titleGame h1:hover {
     transform: scale(0.9);
-    color: #0bb223;
+    color: var(--theme-color);
     cursor: pointer;
 }
 
@@ -70,21 +78,7 @@ body {
     transition: .4s ease;
 }
 
-#color-1 {
-    background-color: #2F5373;
-}
 
-#color-2 {
-    background-color: #BF3111;
-}
-
-#color-3 {
-    background-color: #F27405;
-}
-
-#color-4 {
-    background-color: #0bb223;
-}
 
 .wrapper {
     width: 1000px;
@@ -126,18 +120,18 @@ body {
     text-align: center;
     font-size: 80px;
     font-weight: 100;
-    color: #0bb223;
+    color: var(--theme-color);
     margin-bottom: 130px;
 }
 
-.active { background-color: #e2fff3; }
+.active { background-color: var(--player-4); }
 .active .player-name { font-weight: 300; }
 
 .active .player-name::after {
     content: "\2022";
     font-size: 47px;
     position: absolute;
-    color: #0bb223;
+    color: var(--theme-color);
     top: -7px;
     right: 10px;
     class: after-element;
@@ -146,7 +140,7 @@ body {
 
 
 .player-current-box {
-    background-color: #0bb223;
+    background-color: var(--theme-color);
     color: #fff;
     width: 40%;
     margin: 0 auto;
@@ -189,7 +183,7 @@ button:focus {
 }
 
 i {
-    color: #0bb223;
+    color: var(--theme-color);
     display: inline-block;
     margin-right: 15px;
     font-size: 32px;
@@ -221,7 +215,7 @@ i {
     font-family: Lato;
     font-size: 20px;
     text-align: center;
-    border: 1px solid #0bb223;
+    border: 1px solid var(--theme-color);
 }
 
 .dice-0 {
@@ -248,7 +242,7 @@ i {
 
 .winner .player-name {
     font-weight: 300;
-    color: #0bb223;
+    color: var(--theme-color);
 }
 
 
