@@ -180,44 +180,23 @@ changeColors.forEach((change) => {
 })
 
 
-document.getElementById('color-1').addEventListener('click', () => {
+// CHANGE COLOR
 
-    document.documentElement.style
-        .setProperty('--player-4', '#b3cef6');
+function colorChangeFunction (idModel, colorHex, bodyBColor) {
+    document.getElementById(idModel).addEventListener('click', () => {
 
-        document.body.style.backgroundColor = "#010D26";
+        document.documentElement.style
+            .setProperty('--model-4', colorHex);
 
-
-})
-
-document.getElementById('color-2').addEventListener('click', () => {
-
-    document.documentElement.style
-        .setProperty('--player-4', '#f8c9cd');
-
-        document.body.style.backgroundColor = "#3b0b04";
-
-})
-
-document.getElementById('color-3').addEventListener('click', () => {
-
-    document.documentElement.style
-        .setProperty('--player-4', '#f7e3c7');
-
-        document.body.style.backgroundColor = "#5e2c06";
-
-
-})
-
-document.getElementById('color-4').addEventListener('click', () => {
-
-    document.documentElement.style
-        .setProperty('--player-4', '#e2fff3');
-
-    document.body.style.backgroundColor = "#012633";
-
-
-})
+        document.body.style.backgroundColor = bodyBColor;
+    })
+}
+colorChangeFunction('color-1', '#b3cef6', '#010D26');
+colorChangeFunction('color-2', '#f8c9cd', '#3b0b04');
+colorChangeFunction('color-3', '#f7e3c7', '#5e2c06');
+colorChangeFunction('color-4', '#e2fff3', '#012633');
+colorChangeFunction('color-5', '#d8c7d2', '#31002A');
+colorChangeFunction('color-6', '#e1e1e1', '#000');
 
 
 

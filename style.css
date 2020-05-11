@@ -3,10 +3,12 @@
 **********************************************/
 :root {
     --theme-color: #0bb223;
-    --player-1: #b3cef6;
-    --player-2: #f8c9cd;
-    --player-3: #f7e3c7;
-    --player-4: #e2fff3;
+    --model-1: #b3cef6;
+    --model-2: #f8c9cd;
+    --model-3: #f7e3c7;
+    --model-4: #e2fff3;
+    --model-5: #d8c7d2;
+    --model-6: #fff;
 }
 
 
@@ -69,13 +71,18 @@ body {
     height: 15px;
     width: 15px;
     transition: .5s;
-    opacity: .3;
+    opacity: .2;
+}
+
+.fix_color:hover {
+
 }
 
 .fix_color:hover {
     opacity: 2;
-    transform: scale(2.5);
     transition: .4s ease;
+    transform: rotateZ(-220deg) scale(2.5);
+
 }
 
 
@@ -124,7 +131,7 @@ body {
     margin-bottom: 130px;
 }
 
-.active { background-color: var(--player-4); }
+.active { background-color: var(--model-4); }
 .active .player-name { font-weight: 300; }
 
 .active .player-name::after {
@@ -238,7 +245,7 @@ i {
 
 }
 
-.winner { background-color: var(--player-4); }
+.winner { background-color: var(--model-4); }
 
 .winner .player-name {
     font-weight: 300;
