@@ -238,7 +238,7 @@ i {
 
 }
 
-.winner { background-color: #dfffed; }
+.winner { background-color: var(--player-4); }
 
 .winner .player-name {
     font-weight: 300;
@@ -268,5 +268,94 @@ i {
     transform: rotateY(0deg);
     color: #fff;
     cursor: alias;
+}
+
+@media only screen and (max-width: 1400px) {
+    /* For desktop: */
+    .wrapper {width: 900px;}
+    #color_change {left: 442px}
+
+}
+
+@media only screen and (max-width: 900px) {
+    /* For desktop: */
+    .wrapper {width: 750px;}
+    #color_change {left: 367px}
+    .player-name > ::after{right: 1320px}
+
+    .player-0-panel,
+    .player-1-panel{
+        height: 500px;
+    }
+
+}
+
+@media only screen and (max-height: 950px) {
+    /* For desktop: */
+    #titleGame h1{
+        font-size: 80px;
+        padding-top: 15px;}
+    #footer {padding-top: 720px}
+    }
+
+@media only screen and (max-height: 870px) {
+    /* For desktop: */
+    #titleGame h1{
+        font-size: 65px;
+        padding-top: 10px;}
+    #footer {padding-top: 710px}
+}
+@media only screen and (max-height: 850px) {
+    /* For desktop: */
+    #titleGame h1{
+        font-size: 53px;
+        padding-top: 9px;}
+    #footer {padding-top: 670px}
+}
+
+@media only screen and (max-height: 770px) {
+    /* For desktop: */
+    #titleGame h1{
+        font-size: 52px;
+        padding-top: 0px;}
+    #footer {padding-top: 620px; font-size: 13px;}
+
+    .btn-new {
+        top: 457px;
+        font-size: 17px;
+    }
+    .btn-roll {
+        top: 350px;
+        font-size: 17px;
+
+    }
+    .btn-hold {
+        top: 390px;
+        font-size: 17px;
+
+    }
+
+    .dice-0{height: 65px}
+    .dice-1{height: 65px}
+
+    #fname{
+        font-size: 14px;
+    }
+
+    #box-number{
+        top: 420px
+    }
+
+    i{
+        font-size:16px;
+        margin-top: 2px;
+    }
+
+    .player-score{font-size: 50px}
+
+    .player-0-panel,
+    .player-1-panel{
+        width: 49%;
+    }
 }
 
