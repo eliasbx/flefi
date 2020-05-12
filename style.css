@@ -518,8 +518,20 @@ input::placeholder{
      position:relative;
 
  }
-
-
+button {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    width: 250px;
+    height: 60px;
+    margin-top: -10px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
 
 
 
