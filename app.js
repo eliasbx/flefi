@@ -24,6 +24,8 @@ var scoreInput = document.getElementById('fname');
 // BUTTON FOR ROLL DICED    Start -->
 
 document.querySelector('.btn-roll').addEventListener('click', function(){
+
+
     if(gamePlaying && scoreInput.value !== '' && scoreInput.value !== '.' && scoreInput.value !== '..' && scoreInput.value !== '...' && scoreInput.value !== '....' && scoreInput.value !== '.....' && scoreInput.value !== '......' && scoreInput.value >= 2) {
         // 1. Random number
         var dice0 = Math.floor(Math.random() * 6) + 1;
@@ -199,6 +201,13 @@ colorChangeFunction('color-3', '#f7e3c7', '#5e2c06');
 colorChangeFunction('color-4', '#e2fff3', '#012633');
 colorChangeFunction('color-5', '#d8c7d2', '#31002A');
 colorChangeFunction('color-6', '#e1e1e1', '#000');
+
+
+
+
+
+
+
 
 
 
