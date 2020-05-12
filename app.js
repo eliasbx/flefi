@@ -50,7 +50,9 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
         //3`. Two six in a row
         if (dice1 + dice0 === 12) {
-            alert('Double 6 for Player' + activePlayer);
+            var playerA;
+            activePlayer === 0 ? playerA = '1' : playerA = '2'
+            alert('Double 6 for Player ' + playerA);
             nextPlayer()
             document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer] = 0;;
 
