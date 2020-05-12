@@ -225,6 +225,8 @@ i {
     border: 1px solid var(--theme-color);
 }
 
+#fname:focus{outline: none}
+
 .dice-0 {
     position: absolute;
     left: 50%;
