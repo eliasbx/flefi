@@ -53,8 +53,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         //3`. Two six in a row
         if (dice1 + dice0 === 12) {
             var playerA;
-            activePlayer === 0 ? playerA = '1' : playerA = '2'
-            alert('Double 6 for Player ' + playerA);
+            activePlayer === 0 ? playerA = localStorage.getItem('textvalue-1') : playerA = localStorage.getItem('textvalue-2')
+            alert('Double 6 for ' + playerA.toUpperCase() + ' !');
             nextPlayer()
             document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer] = 0;;
 
@@ -154,6 +154,10 @@ function init() {
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
+
+    document.getElementById('name-0').textContent = localStorage.getItem('textvalue-1');
+    document.getElementById('name-1').textContent = localStorage.getItem('textvalue-2');
+
     // document.getElementById('name-0').textContent = ;
     // document.getElementById('name-1').textContent = 'Player 2';
     document.querySelector('.player-0-panel').classList.remove('winner');

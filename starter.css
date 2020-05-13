@@ -111,6 +111,7 @@ input {
     width: 50%;
     margin: 0 200px;
     border: none;
+    transition: transform .3s ease-out;
 }
 
 input:hover,
@@ -119,12 +120,15 @@ input:active:focus {
     color: #000;
     outline: none;
     border-bottom: 7px solid #ffbf00;
+    transform: translate(0, -4px);
+    outline: none
 }
 input::placeholder{
     color:#000;
     position:relative;
-
 }
+
+
 .register {
     position: absolute;
     width: 100px;
@@ -133,7 +137,7 @@ input::placeholder{
     color: #909090;
     background: none;
     font-family: Lato;
-    font-size: 20px;
+    font-size: 25px;
     text-transform: uppercase;
     cursor: pointer;
     display: inline-block;
@@ -142,7 +146,56 @@ input::placeholder{
     margin-top:140px;
     border: none;
     -webkit-transition: .5s;
-    transition: .5s;
+    transition: .2s;
+}
+
+.register:before {
+    content: "/";
+    left: -5px;
+}
+
+.register:after {
+    content: "/";
+    left: 5px;
+}
+
+.register:hover {
+    color: #fff;
+    transition: .4s;
+}
+
+.register:before {
+    position: relative;
+    opacity: 0;
+    color: #fff;
+    top: -1px;
+    transition: all .4s;
+}
+
+.register:after {
+    position: relative;
+    opacity: 0;
+    color: #fff;
+    top: -1px;
+    transition: all .4s;
+}
+
+.register:hover:before {
+    opacity: 0.7;
+    color: #fff;
+}
+
+.register:hover:after {
+    opacity: 0.7;
+    color: #fff;
+}
+
+.register:hover:before {
+    left: -10px;
+}
+
+.register:hover:after {
+    left: 10px;
 }
 
 
@@ -167,6 +220,7 @@ input::placeholder{
 .register:focus {
     outline: none;
 }
+
 
 
 
