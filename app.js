@@ -83,7 +83,6 @@ document.querySelector('#box-number').addEventListener('submit', function (e) {
 //INPUT FINAL SCORE Finish <--
 
 
-
 // BUTTON HOLD Start -->
 
 document.querySelector('.btn-hold').addEventListener('click', function() {
@@ -155,8 +154,8 @@ function init() {
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
-    document.getElementById('name-0').textContent = 'Player 1';
-    document.getElementById('name-1').textContent = 'Player 2';
+    // document.getElementById('name-0').textContent = ;
+    // document.getElementById('name-1').textContent = 'Player 2';
     document.querySelector('.player-0-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('active');
@@ -201,6 +200,10 @@ colorChangeFunction('color-3', '#f7e3c7', '#5e2c06');
 colorChangeFunction('color-4', '#e2fff3', '#012633');
 colorChangeFunction('color-5', '#d8c7d2', '#31002A');
 colorChangeFunction('color-6', '#e1e1e1', '#000');
+
+
+document.getElementById('namePlayer_1').innerHTML = localStorage.getItem('textvalue-1');
+document.getElementById('namePlayer_2').innerHTML = localStorage.getItem('textvalue-2');
 
 
 

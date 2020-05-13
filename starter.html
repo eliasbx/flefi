@@ -5,7 +5,7 @@
     <title>Flefi Home</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
-    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="starter.css">
     <link rel="shortcut icon" href="logoT.png" />
 
 
@@ -19,39 +19,36 @@
 
     <div id="change-name-1" class="change_name">
         <div id="person-1">
-
             <div class="container">
                 <h2>Register</h2>
-                <form id="name_1">
-                    <input type="text" class="email" id="input-name-player-1" placeholder="Name Player 1">
-                    <br/>
-                    <input type="password" class="pwd"  id="input-chalange-player-1"placeholder="Chalange">
-
+                <form action="index.html" id="name_1">
+                    <input type="text" class="name" id="key-1" placeholder="Name Player 1" autocomplete="off">
+<!--                    <button onclick="passName1();" type="submit"  class="register" id="reg1">-->
+<!--                        <span>register</span>-->
+<!--                    </button>-->
                 </form>
-                <button onclick="inputName1()" class="register">
-                    <span>register</span>
-                </button>
-
             </div>
-
         </div>
     </div>
+
+
+
     <div id="change-name-2" class="change-name">
         <div id="person-2">
-
             <div class="container">
-                <h2>Register</h2>
-                <form>
-                    <input type="text" class="email" id="input-name-player-2" placeholder="Name Player 2">
-                    <br/>
-                    <input type="password" class="pwd" id="input-chalange-player-2" placeholder="Chalange">
-                </form>
+            <h2>Register</h2>
+            <form action="index.html" id="name_2">
+                <input type="text" class="name" id="key-2" placeholder="Name Player 2" autocomplete="off">
+                <button onclick="passName2(), passName1();" type="submit"  class="register" id="reg2">
+                    <span>register</span>
+                </button>
+            </form>
             </div>
-
+        </div>
         </div>
     </div>
-
 </div>
+
 
 <script src="starter.js"></script>
 

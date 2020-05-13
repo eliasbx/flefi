@@ -1,0 +1,180 @@
+
+/*STARTER PAGE*/
+/*STARTER PAGE*/
+
+
+body {
+    background-color: #012633;
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    position: relative;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#box-players-name {
+    /*height: 100vh;*/
+    /*width: 100%;*/
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+}
+
+#box-players-name h1 {
+    text-align: center;
+    font-size: 270px;
+    color: white;
+    position: absolute;
+    left: 40%;
+    transform: rotate(90deg);
+    top: 35%;
+    cursor: pointer;
+}
+
+#box-players-name p {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 26%;
+    cursor: pointer;
+}
+
+.change-name {
+    width: 50%;
+    height: 100vh;
+}
+
+#change-name-1 {
+    background-color: #012633;
+    float: right;
+    flex: 2;
+}
+
+#change-name-2 {
+    background-color: #043f0c;
+    float: left;
+    flex: 2;
+}
+
+#person-1, #person-2 {
+    height: 80vh;
+    width: 80%;
+    margin: 100px auto;
+}
+
+#person-1 {
+    border-bottom:2px solid #fff;
+    border-left:2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+/*#person-1:after {*/
+/*    content: '';*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    width: 9%;*/
+/*    top: 187px;*/
+/*    left: 774px;*/
+/*    border: 2px solid white;*/
+/*    transform: rotate(90deg);*/
+
+/*}*/
+
+#person-2{
+    border-bottom:2px solid #fff;
+    border-right:2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+.container {
+    margin-top: 500px;
+}
+
+#person-2 h2, person-1, h2{
+    padding:40px 160px;
+    font-weight:lighter;
+    text-transform:uppercase;
+    color: #ffffff;
+}
+
+input {
+    display: block;
+    height: 50px;
+    width: 50%;
+    margin: 0 200px;
+    border: none;
+}
+
+input:hover,
+input:focus,
+input:active:focus {
+    color: #000;
+    outline: none;
+    border-bottom: 7px solid #ffbf00;
+}
+input::placeholder{
+    color:#000;
+    position:relative;
+
+}
+.register {
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #909090;
+    background: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 60px;
+    margin-top:140px;
+    border: none;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+
+.name {
+    position:relative;
+    z-index:1;
+    border-bottom:1px solid rgba(0,0,0,.1);
+    padding-left:20px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform:uppercase;
+    color:#858585;
+    font-weight:lighter;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.register:hover {
+    font-weight: 500;
+    color: #f3f3f3;
+
+}
+.register:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
