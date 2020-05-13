@@ -59,7 +59,7 @@ body {
 
 #color_change {
     width: 5%;
-    height: 40px;
+    height: 80px;
     background-color: rgba(0,0,0,0);
     left: 492px;
     top: 20px;
@@ -95,6 +95,7 @@ body {
     box-shadow: 10px 10px 50px rgba(0, 0, 0, 1);
     overflow: hidden;
     border-radius: 20px;
+    z-index: 0;
 }
 
 .player-0-panel,
