@@ -204,6 +204,7 @@ colorChangeFunction('color-3', '#f7e3c7', '#5e2c06');
 colorChangeFunction('color-4', '#e2fff3', '#012633');
 colorChangeFunction('color-5', '#d8c7d2', '#31002A');
 colorChangeFunction('color-6', '#e1e1e1', '#000');
+colorChangeFunction('color-7', '#f4ffc7', '#757f09');
 
 
 document.getElementById('namePlayer_1').innerHTML = localStorage.getItem('textvalue-1');
