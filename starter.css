@@ -53,13 +53,13 @@ body {
 }
 
 #change-name-1 {
-    background-color: #012633;
+    background-color: rgba(3, 3, 3, 0.98);
     float: right;
     flex: 2;
 }
 
 #change-name-2 {
-    background-color: #043f0c;
+    background-color: #1e1e1e;
     float: left;
     flex: 2;
 }
@@ -153,7 +153,7 @@ input::placeholder{
     display: inline-block;
     float: right;
     height: 60px;
-    margin-top:140px;
+    margin-top: 70px;
     border: none;
     -webkit-transition: .5s;
     transition: .2s;

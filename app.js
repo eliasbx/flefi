@@ -55,7 +55,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
             var playerA;
             activePlayer === 0 ? playerA = localStorage.getItem('textvalue-1') : playerA = localStorage.getItem('textvalue-2')
             alert('Double 6 for ' + playerA.toUpperCase() + ' !');
-            nextPlayer()
+            nextPlayer();
             document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer] = 0;;
 
         }
@@ -64,6 +64,10 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 });
 
 //BUTTON ROLL DICE Finish <--
+
+
+document.querySelector('.boxtitle-1').innerHTML = 'Chalange for: ' + '<br>' + localStorage.getItem('textvalue-2').charAt(0).toUpperCase() + localStorage.getItem('textvalue-2').slice(1);
+document.querySelector('.boxtitle-2').innerHTML = 'Chalange for: ' + '<br>' + localStorage.getItem('textvalue-1').charAt(0).toUpperCase() + localStorage.getItem('textvalue-1').slice(1);
 
 
 
@@ -103,6 +107,17 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
             gamePlaying = false;
+
+                if(document.querySelector('#name-0').textContent === 'Winner!'){
+                    document.getElementById('chalanhe-box-1').style.marginLeft = '100px';
+                    document.getElementById('chalanhe-box-1').style.transition = '1.5s';
+                }
+
+                else if(document.querySelector('#name-1').textContent === 'Winner!') {
+                    document.getElementById('chalanhe-box-2').style.marginRight = '100px';
+                    document.getElementById('chalanhe-box-2').style.transition = '1.5s';
+                }
+
         } else {
             //Next player
             nextPlayer();
@@ -143,6 +158,12 @@ function init() {
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
+
+    document.getElementById('chalanhe-box-1').style.marginLeft = '420px';
+    document.getElementById('chalanhe-box-1').style.transition = '1.5s';
+
+    document.getElementById('chalanhe-box-2').style.marginRight = '420px';
+    document.getElementById('chalanhe-box-2').style.transition = '1.5s';
 
     document.getElementById("box-number").reset();
 
@@ -207,9 +228,12 @@ colorChangeFunction('color-6', '#e1e1e1', '#000');
 colorChangeFunction('color-7', '#f4ffc7', '#757f09');
 
 
+document.getElementById('chalangeOn1').innerHTML = localStorage.getItem('chalange-text-1');
+document.getElementById('chalangeOn2').innerHTML = localStorage.getItem('chalange-text-2');
+
+
 document.getElementById('namePlayer_1').innerHTML = localStorage.getItem('textvalue-1');
 document.getElementById('namePlayer_2').innerHTML = localStorage.getItem('textvalue-2');
-
 
 
 

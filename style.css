@@ -94,7 +94,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    box-shadow: 10px 10px 50px rgba(0, 0, 0, 1);
+    box-shadow: -2px 0px 100px rgba(0, 0, 0, 1);
     overflow: hidden;
     border-radius: 20px;
     transition: .4s;
@@ -109,6 +109,82 @@ body {
 }
 
 
+#chalanhe-box-1 {
+    height: 30vh;
+    width: 20%;
+    background-color: #AC0454;
+    float: left;
+    position: relative;
+    margin-top: 180px;
+    margin-left: 420px;
+    border-radius: 10px;
+}
+
+#chalanhe-box-2 {
+    height: 30vh;
+    width: 20%;
+    background-color: #a2ac3a;
+    float:right;
+    position: relative;
+    margin-top: 180px;
+    margin-right: 420px;
+    border-radius: 10px;
+}
+
+.text-chalange-1 {
+    transform: rotate(90deg);
+    float: left;
+    margin: 50px 0px 0 -20px;
+    color: #ebebeb;
+}
+
+.text-chalange-2 {
+    transform: rotate(90deg);
+    float: right;
+    margin: 50px -20px 0 0px;
+    color: #EBEBEB;
+    transform: rotate(270deg);
+}
+
+.boxtitle-1, .boxtitle-2 {
+    color: white;
+}
+
+.boxtitle-1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.boxtitle-2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#chalanhe-box-1 p, #chalanhe-box-2 p {
+    color: white;
+    margin: 20px 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.textC1, .textC2 {
+    background-color: none;
+    width: 250px;
+    height: 150px;
+    margin: auto;
+    overflow: scroll;
+    position: relative;
+    color: white;
+    top: 20px;
+}
+
+.textC1 {
+    right: 30px;
+}
+
+.textC2 {
+    left: 30px;
+}
 
 /**********************************************
 *** PLAYERS
