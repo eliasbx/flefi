@@ -4,7 +4,7 @@
 
 
 body {
-    background-color: #012633;
+    background-color: #000;
     background-size: cover;
     background-position: center;
     font-family: Lato;
@@ -29,18 +29,20 @@ body {
 #box-players-name h1 {
     text-align: center;
     font-size: 270px;
-    color: white;
     position: absolute;
     left: 40%;
     transform: rotate(90deg);
     top: 35%;
     cursor: pointer;
+    background: linear-gradient(to top, #fff 32%, #000 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #box-players-name p {
     text-align: center;
     font-size: 20px;
-    color: white;
+    color: #000;
     position: absolute;
     left: 50%;
     top: 26%;
@@ -59,7 +61,7 @@ body {
 }
 
 #change-name-2 {
-    background-color: #1e1e1e;
+    background-color: #fff;
     float: left;
     flex: 2;
 }
@@ -93,9 +95,9 @@ body {
 /*}*/
 
 #person-2{
-    border-bottom:2px solid #fff;
-    border-right:2px solid #fff;
-    border-top: 2px solid #fff;
+    border-bottom:2px solid #000;
+    border-right:2px solid #000;
+    border-top: 2px solid #000;
     border-radius: 15px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -115,6 +117,10 @@ body {
 
 }
 
+#person-2 h2 {
+    color: #000;
+}
+
 input {
     display: block;
     height: 50px;
@@ -131,7 +137,8 @@ input:active:focus {
     outline: none;
     border-bottom: 7px solid #ffbf00;
     transform: translate(0, -4px);
-    outline: none
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 }
 input::placeholder{
     color:#000;
@@ -141,11 +148,10 @@ input::placeholder{
 
 .register {
     position: absolute;
-    width: 100px;
+    width: 150px;
     left: 50%;
     transform: translateX(-50%);
-    color: #909090;
-    background: none;
+    color: #fff;
     font-family: Lato;
     font-size: 25px;
     text-transform: uppercase;
@@ -155,17 +161,45 @@ input::placeholder{
     height: 60px;
     margin-top: 70px;
     border: none;
-    -webkit-transition: .5s;
-    transition: .2s;
+    -webkit-transition: .6s;
+    transition: .6s;
+    background-color: #e1a800;
+    border-radius: 30px;
+    transition: background-color 3s linear;
+    -webkit-transition: background-color 3s linear;
+    -o-transition: background-color 3s linear;
+    -moz-transition: background-color 3s linear;
+    -ms-transition: background-color 3s linear;
+}
+
+@keyframes hoverme {
+    0% {
+        background-color: #e1a800;
+    }
+    25% {
+        background-color: #242aff;
+    }
+    50% {
+        background-color: #008000;
+    }
+    25% {
+        background-color: #99122d;
+    }
+    100% {
+        background-color: #e1a800;
+    }
+}
+.register:hover {
+    animation: hoverme 4s infinite;
 }
 
 .register:before {
-    content: "/";
+    content: ">";
     left: -5px;
 }
 
 .register:after {
-    content: "/";
+    content: "<";
     left: 5px;
 }
 
@@ -225,13 +259,25 @@ input::placeholder{
 
 .register:hover {
     font-weight: 500;
-    color: #f3f3f3;
+    color: #fff;
+    background-color: #be8e00;
 
 }
 .register:focus {
     outline: none;
 }
 
+#key-2, #chalange-2 {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+#key-2:hover, #chalange-2:hover{
+    border-bottom: 7px solid #ffbf00;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+
+
+}
 
 
 

@@ -228,8 +228,8 @@ colorChangeFunction('color-6', '#e1e1e1', '#000');
 colorChangeFunction('color-7', '#f4ffc7', '#757f09');
 
 
-document.getElementById('chalangeOn1').innerHTML = localStorage.getItem('chalange-text-1');
-document.getElementById('chalangeOn2').innerHTML = localStorage.getItem('chalange-text-2');
+document.getElementById('chalangeOn1').innerHTML = localStorage.getItem('chalange-text-1').toUpperCase();
+document.getElementById('chalangeOn2').innerHTML = localStorage.getItem('chalange-text-2').toUpperCase();
 
 
 document.getElementById('namePlayer_1').innerHTML = localStorage.getItem('textvalue-1');
