@@ -68,12 +68,16 @@ body {
     height: 80vh;
     width: 80%;
     margin: 100px auto;
+
 }
 
 #person-1 {
     border-bottom:2px solid #fff;
     border-left:2px solid #fff;
     border-top: 2px solid #fff;
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 /*#person-1:after {*/
@@ -92,10 +96,15 @@ body {
     border-bottom:2px solid #fff;
     border-right:2px solid #fff;
     border-top: 2px solid #fff;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
 }
 
 .container {
     margin-top: 500px;
+
 }
 
 #person-2 h2, person-1, h2{
@@ -103,6 +112,7 @@ body {
     font-weight:lighter;
     text-transform:uppercase;
     color: #ffffff;
+
 }
 
 input {
@@ -210,6 +220,7 @@ input::placeholder{
     font-weight:lighter;
     -webkit-transition:.5s;
     transition:.5s;
+    border-radius: 5px;
 }
 
 .register:hover {

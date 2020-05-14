@@ -27,6 +27,7 @@
 
 body {
     background-color: #012633;
+    transition: .4s;
     background-size: cover;
     background-position: center;
     font-family: Lato;
@@ -80,6 +81,7 @@ body {
     opacity: 2;
     transition: .4s ease;
     transform: rotateZ(-220deg) scale(2.5);
+    border-radius: 2px;
 
 }
 
@@ -95,7 +97,7 @@ body {
     box-shadow: 10px 10px 50px rgba(0, 0, 0, 1);
     overflow: hidden;
     border-radius: 20px;
-    z-index: 0;
+    transition: .4s;
 }
 
 .player-0-panel,
@@ -129,9 +131,10 @@ body {
     font-weight: 100;
     color: var(--theme-color);
     margin-bottom: 130px;
+    transition: .4s;
 }
 
-.active { background-color: var(--model-4); }
+.active { background-color: var(--model-4); transition: .1s }
 .active .player-name { font-weight: 300; }
 
 .active .player-name::after {
@@ -141,6 +144,7 @@ body {
     color: var(--theme-color);
     top: -7px;
     right: auto;
+    transition: .4s;
     /*class: after-element;*/
 }
 
@@ -153,13 +157,14 @@ body {
     margin: 0 auto;
     padding: 12px;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 6px 6px 10px rgba(0, 0, 0, .4);
-    transition: .6s;
+    transition: .4s;
 }
 
 .player-current-box:hover {
     box-shadow: 8px 8px 12px rgba(0, 0, 0, .5);
+    transform: scale(1.06);
     transition: .5s;
 }
 
@@ -231,6 +236,7 @@ i {
     font-size: 20px;
     text-align: center;
     border: 1px solid var(--theme-color);
+    border-radius: 5px;
 }
 
 #fname:focus{outline: none}
