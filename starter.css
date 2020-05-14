@@ -2,6 +2,8 @@
 /*STARTER PAGE*/
 /*STARTER PAGE*/
 
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300&display=swap');
+
 
 body {
     background-color: #000;
@@ -44,9 +46,12 @@ body {
     font-size: 20px;
     color: #000;
     position: absolute;
-    left: 50%;
-    top: 26%;
+    left: 47.8%;
+    top: 26.5%;
     cursor: pointer;
+    font-family: 'BenchNine', sans-serif;
+    text-decoration: none;
+    /*letter-spacing: -2px;*/
 }
 
 .change-name {
@@ -177,12 +182,19 @@ input::placeholder{
         background-color: #e1a800;
     }
     25% {
-        background-color: #242aff;
+        background-color: #2F5373;
     }
+    40% {
+         background-color: #BF3111;
+     }
+
     50% {
-        background-color: #008000;
+        background-color: #F27405;
     }
     25% {
+        background-color: #0BB223;
+    }
+    75% {
         background-color: #99122d;
     }
     100% {
@@ -272,13 +284,15 @@ input::placeholder{
     border: 1px solid #000;
 }
 
-#key-2:hover, #chalange-2:hover{
+#key-2:hover,
+#key-2:focus,
+#key-2:active:focus,
+#chalange-2:hover,
+#chalange-2:focus,
+#chalange-2:active:focus {
     border-bottom: 7px solid #ffbf00;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-
-
 }
-
 
 
 

@@ -2,14 +2,15 @@
 *** GENERAL
 **********************************************/
 :root {
-    --theme-color: #0bb223;
+    --theme-color: rgba(85,85,85,0.99);
     --model-1: #b3cef6;
     --model-2: #f8c9cd;
     --model-3: #f7e3c7;
     --model-4: #e2fff3;
     --model-5: #d8c7d2;
     --model-6: #fff;
-    --model-7: #f4ffc7
+    --model-7: #f4ffc7;
+    --model-8: #e1e1e1;
 }
 
 
@@ -26,7 +27,7 @@
 }
 
 body {
-    background-color: #012633;
+    background-color: #000;
     transition: .4s;
     background-size: cover;
     background-position: center;
@@ -112,7 +113,7 @@ body {
 #chalanhe-box-1 {
     height: 30vh;
     width: 20%;
-    background-color: #AC0454;
+    background-color: var(--theme-color);
     float: left;
     position: relative;
     margin-top: 180px;
@@ -123,7 +124,7 @@ body {
 #chalanhe-box-2 {
     height: 30vh;
     width: 20%;
-    background-color: #a2ac3a;
+    background-color: var(--theme-color);
     float:right;
     position: relative;
     margin-top: 180px;
@@ -211,7 +212,7 @@ body {
     transition: .4s;
 }
 
-.active { background-color: var(--model-4); transition: .1s }
+.active { background-color: var(--model-8); transition: .1s }
 .active .player-name { font-weight: 300; }
 
 .active .player-name::after {
@@ -338,7 +339,7 @@ i {
 
 }
 
-.winner { background-color: var(--model-4); }
+.winner { background-color: var(--model-8); }
 
 .winner .player-name {
     font-weight: 300;

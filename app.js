@@ -214,7 +214,7 @@ function colorChangeFunction (idModel, colorHex, bodyBColor) {
     document.getElementById(idModel).addEventListener('click', () => {
 
         document.documentElement.style
-            .setProperty('--model-4', colorHex);
+            .setProperty('--model-8', colorHex);
 
         document.body.style.backgroundColor = bodyBColor;
     })
