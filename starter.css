@@ -201,7 +201,7 @@ input::placeholder{
         background-color: #e1a800;
     }
 }
-.register:hover {
+.register {
     animation: hoverme 4s infinite;
 }
 

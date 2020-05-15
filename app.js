@@ -101,7 +101,10 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
             if (scores[activePlayer] >= scoreInput.value) {
 
-            document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+                var x = document.getElementById("myAudio");
+                x.play();
+
+                document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.dice-0').style.display = 'none';
             document.querySelector('.dice-1').style.display = 'none';
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
@@ -225,7 +228,7 @@ colorChangeFunction('color-3', '#f7e3c7', '#5e2c06');
 colorChangeFunction('color-4', '#e2fff3', '#012633');
 colorChangeFunction('color-5', '#d8c7d2', '#31002A');
 colorChangeFunction('color-6', '#e1e1e1', '#000');
-colorChangeFunction('color-7', '#f4ffc7', '#757f09');
+colorChangeFunction('color-7', '#ffcee3', '#674053');
 
 
 document.getElementById('chalangeOn1').innerHTML = localStorage.getItem('chalange-text-1').toUpperCase();
@@ -237,6 +240,12 @@ document.getElementById('namePlayer_2').innerHTML = localStorage.getItem('textva
 
 
 
+
+/*
+
+
+
+ */
 
 
 
