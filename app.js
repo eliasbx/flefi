@@ -28,6 +28,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
     if(gamePlaying && scoreInput.value !== '' && scoreInput.value !== '.' && scoreInput.value !== '..' && scoreInput.value !== '...' && scoreInput.value !== '....' && scoreInput.value !== '.....' && scoreInput.value !== '......' && scoreInput.value >= 2) {
         // 1. Random number
+        var z = document.getElementById("audioRoll");
+        z.play();
         var dice0 = Math.floor(Math.random() * 6) + 1;
         var dice1 = Math.floor(Math.random() * 6) + 1;
 
@@ -92,6 +94,8 @@ document.querySelector('#box-number').addEventListener('submit', function (e) {
 document.querySelector('.btn-hold').addEventListener('click', function() {
     if (gamePlaying && scoreInput.value !== '' && scoreInput.value !== '.' && scoreInput.value !== '..' && scoreInput.value !== '...' && scoreInput.value !== '....' && scoreInput.value !== '.....' && scoreInput.value !== '......' && scoreInput.value >= 2) {
         // Add CURRENT score to GLOBAL score
+        var y = document.getElementById("audioHold");
+        y.play();
         scores[activePlayer] += roundScore;
 
         // Update the UI
@@ -208,7 +212,8 @@ changeColors.forEach((change) => {
         root.style.setProperty('--theme-color', e.target.style.backgroundColor);
     })
 
-})
+});
+
 
 
 // CHANGE COLOR
@@ -237,15 +242,6 @@ document.getElementById('chalangeOn2').innerHTML = localStorage.getItem('chalang
 
 document.getElementById('namePlayer_1').innerHTML = localStorage.getItem('textvalue-1');
 document.getElementById('namePlayer_2').innerHTML = localStorage.getItem('textvalue-2');
-
-
-
-
-/*
-
-
-
- */
 
 
 

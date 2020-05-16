@@ -504,3 +504,106 @@ i {
 .change-name-player h3:hover:before {
     left: -10px;
 }
+
+#version-text
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media only screen and (max-height: 700px) {
+    .wrapper {
+        width: 800px;
+        height: 75vh;
+    }
+    .player-name {
+        font-size: 26px;
+        top: -20px
+    }
+    .active .player-name::after {
+        font-size: 31px;
+        top: -5px;
+        right: auto;
+        transition: .4s;
+        /*class: after-element;*/
+    }
+    .player-score {
+        font-size: 37px;
+    }
+    .player-current-box {
+        height: 70px;
+    }
+    .player-current-label {
+        font-size: 9px;
+    }
+    .player-current-score {
+        font-size: 24px;
+    }
+    .change-name-player h3 {
+        font-size: 12px;
+    }
+    #footer {padding-top: 500px; font-size: 10px}
+    #color_change {
+        left: 385px;
+    }
+    .fix_color {
+        height: 13px;
+        width: 13px;
+    }
+    .dice-0{height: 55px}
+    .dice-1{height: 55px}
+
+    .btn-new {
+        top: 430px;
+        font-size: 13px;
+    }
+    .btn-roll {
+        top: 350px;
+        font-size: 13px;
+    }
+    .btn-hold {
+        top: 373px;
+        font-size: 13px;
+    }
+    #fname {
+        font-size: 12px;
+    }
+    #box-number {
+        top: 397px;
+    }
+    i{
+        font-size:13px;
+        margin-top: 2px;
+    }
+    #titleGame h1{
+        font-size: 40px;
+        padding-top: 10px;
+    }
+
+    #chalanhe-box-2, #chalanhe-box-1 {
+        height: 180px;
+        width: 300px;
+    }
+    .boxtitle-1, .boxtitle-2 {
+        font-size: 15px;
+    }
+
+    .text-chalange-1, .text-chalange-2 {
+        font-size: 13px;
+        margin-top: 28px;
+    }
+    .text-chalange-1 {
+        padding-left: 10px;
+    }
+    .text-chalange-2 {
+        padding-right: 10px;
+    }
+
+    p #chalangeOn2 , p #chalangeOn2  {
+        font-size: 2px;
+    }
+}
